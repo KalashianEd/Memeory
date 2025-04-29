@@ -61,7 +61,7 @@ public class SplashActivity extends AppCompatActivity {
             startActivity(intent);
             finish(); // Закрываем сплэш-экран, чтобы пользователь не мог вернуться на него
             
-            // Добавляем анимацию перехода
+            // Добавляем анимацию переходаfff
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }, SPLASH_DELAY);
     }
