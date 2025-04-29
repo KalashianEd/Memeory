@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "873670028604",
+    "project_id": "memeoryquiz",
+    "storage_bucket": "memeoryquiz.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873670028604:android:a7207b02bb73203515c239",
+        "android_client_info": {
+          "package_name": "com.kalashianed.memeory"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8DLQkZaGEIE6SgV1b11SpHH1oygjJEUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Мемори</string>
+    <string name="app_tagline">Кровавая битва за мемы!</string>
+    <string name="app_logo">Логотип приложения</string>
+    <string name="meme_image">Изображение мема</string>
+    <string name="question_what_meme">Как называется этот мем?</string>
+    <string name="correct">Правильно!</string>
+    <string name="wrong">Неправильно! Это %s</string>
+    <string name="next">Далее</string>
+    <string name="results_title">Результаты</string>
+    <string name="your_score">Ваш результат</string>
+    <string name="score_details">%1$d из %2$d правильных ответов</string>
+    <string name="play_again">Играть снова</string>
+    <string name="share_results">Поделиться результатами</string>
+    <string name="result_image">Изображение результата</string>
+    <string name="result_emoji">Эмодзи результата</string>
+    <string name="result_excellent">Отлично! Ты настоящий знаток мемов!</string>
+    <string name="result_good">Хороший результат! Ты хорошо разбираешься в мемах.</string>
+    <string name="result_average">Неплохо, но ты можешь лучше!</string>
+    <string name="result_poor">Стоит подтянуть знания мемов!</string>
+    <string name="share_message">Я набрал %1$d%% в игре Мемори! Попробуй и ты!</string>
+    <string name="restart_game">Начать заново</string>
+    <string name="back_to_main">Вернуться на главный экран</string>
+    <string name="best_score">Лучший счет</string>
+    <string name="best_streak_label">Лучшая серия</string>
+    
+    <!-- Строки для нижней навигации -->
+    <string name="title_home">Главная</string>
+    <string name="title_leaderboard">Рейтинг</string>
+    <string name="title_settings">Настройки</string>
+    <string name="title_account">Аккаунт</string>
+    
+    <!-- Строки для настроек -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_sound_enabled">Звуки</string>
+    <string name="settings_vibration_enabled">Вибрация</string>
+    <string name="settings_night_mode">Ночной режим</string>
+    <string name="reset_progress">Сбросить прогресс</string>
+    <string name="reset_progress_title">Сбросить статистику?</string>
+    <string name="reset_progress_confirmation">Это действие сбросит всю вашу статистику и прогресс в игре. Продолжить?</string>
+    <string name="about_app">О приложении</string>
+    <string name="app_description">Memeory - увлекательная игра на знание мемов. Проверьте свои знания и отгадайте максимальное количество мемов!</string>
+    <string name="app_version">Версия 1.0</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="progress_reset_success">Прогресс сброшен!</string>
+    <string name="sound_enabled">Звуки включены</string>
+    <string name="sound_disabled">Звуки отключены</string>
+    <string name="vibration_enabled">Вибрация включена</string>
+    <string name="vibration_disabled">Вибрация отключена</string>
+    <string name="night_mode_enabled">Ночной режим включен</string>
+    <string name="night_mode_disabled">Ночной режим отключен</string>
+    
+    <!-- Строки для уровней сложности -->
+    <string name="select_difficulty">Выберите уровень сложности:</string>
+    <string name="difficulty_easy">Легкий (5 мемов)</string>
+    <string name="difficulty_medium">Средний (10 мемов)</string>
+    <string name="difficulty_hard">Сложный (все мемы)</string>
+    <string name="start_game">Начать игру</string>
+    
+    <!-- Строки для отображения серии ответов -->
+    <string name="streak_label">Серия:</string>
+    <string name="streak_count">%d 🔥</string>
+    <string name="best_streak">Рекорд: %d 🏆</string>
+    <string name="current_level">Уровень: %d 📈</string>
+    
+    <!-- Названия мемов на русском -->
+    <string name="drake_hotline_bling">Дрейк</string>
+    <string name="distracted_boyfriend">Неверный парень</string>
+    <string name="expanding_brain">Расширяющийся мозг</string>
+    <string name="disaster_girl">Девочка-катастрофа</string>
+    <string name="hide_pain_harold">Гарольд скрывающий боль</string>
+    <string name="doge">Собака Doge</string>
+    <string name="success_kid">Успешный малыш</string>
+    <string name="grumpy_cat">Сердитый кот</string>
+    <string name="roll_safe">Думающий парень</string>
+    <string name="bad_luck_brian">Неудачник Брайан</string>
+    <string name="crying_jordan">Плачущий Джордан</string>
+    <string name="pepe_frog">Лягушонок Пепе</string>
+    <string name="salt_bae">Солящий повар</string>
+    <string name="this_is_fine">Всё нормально</string>
+    <string name="one_does_not_simply">Боромир</string>
+</resources>

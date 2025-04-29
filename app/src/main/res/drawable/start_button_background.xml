@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#CCFFFFFF">
+    
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    
+    <item android:id="@android:id/background">
+        <layer-list>
+            <!-- Тень -->
+            <item
+                android:left="2dp"
+                android:right="2dp"
+                android:bottom="6dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="30dp" />
+                    <solid android:color="#40000000" />
+                </shape>
+            </item>
+            
+            <!-- Основной фон -->
+            <item
+                android:bottom="4dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="0dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="30dp" />
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#16A085"
+                        android:centerColor="#11806A"
+                        android:endColor="#0E6655"
+                        android:type="linear" />
+                    <stroke
+                        android:width="2dp"
+                        android:color="#88FFFFFF" />
+                </shape>
+            </item>
+            
+            <!-- Блик сверху для объемности -->
+            <item
+                android:bottom="4dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="0dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="30dp" />
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#30FFFFFF"
+                        android:centerY="0.1"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+    <!-- Нажатое состояние -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <item
+                android:bottom="2dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="2dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="30dp" />
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#0F6C5E"
+                        android:centerColor="#0B5345"
+                        android:endColor="#08403A"
+                        android:type="linear" />
+                    <stroke
+                        android:width="2dp"
+                        android:color="#88FFFFFF" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</ripple> 

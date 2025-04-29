@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- Фон с градиентом -->
+    <path
+        android:pathData="M256,256m-230,0a230,230 0,1 1,460 0a230,230 0,1 1,-460 0"
+        android:fillColor="#8A2387" />
+
+    <path
+        android:pathData="M256,256m-210,0a210,210 0,1 1,420 0a210,210 0,1 1,-420 0"
+        android:fillColor="#E94057" />
+
+    <path
+        android:pathData="M256,256m-170,0a170,170 0,1 1,340 0a170,170 0,1 1,-340 0"
+        android:fillColor="#F27121" />
+
+    <!-- Внутренний круг -->
+    <path
+        android:pathData="M256,256m-150,0a150,150 0,1 1,300 0a150,150 0,1 1,-300 0"
+        android:fillColor="#FFFFFF"
+        android:alpha="0.95" />
+
+    <!-- Буква "M" стилизованная под мем с тенью -->
+    <path
+        android:pathData="M143,173 L143,343 L173,343 L173,223 L203,283 L233,223 L233,343 L263,343 L263,173 L233,173 L203,233 L173,173 Z"
+        android:fillColor="#8E54E9"
+        android:strokeColor="#4776E6"
+        android:strokeWidth="4" />
+
+    <!-- Смайлик элементы -->
+    <path
+        android:pathData="M340,180a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"
+        android:fillColor="#FF5252" />
+
+    <path
+        android:pathData="M310,262a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"
+        android:fillColor="#FF5252" />
+    
+    <!-- Глаза смайлика -->
+    <path
+        android:pathData="M370,180a10,10 0,1 1,0 0.1"
+        android:fillColor="#FFFFFF" />
+        
+    <path
+        android:pathData="M340,262a10,10 0,1 1,0 0.1"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Соединительная линия (искривленная) -->
+    <path
+        android:pathData="M360,210 Q355,240 340,262"
+        android:strokeColor="#FF5252"
+        android:strokeWidth="12"
+        android:strokeLineCap="round" />
+
+    <!-- Подпись "MEMEORY" в современном стиле -->
+    <path
+        android:pathData="M156,380 L356,380"
+        android:strokeColor="#E94057"
+        android:strokeWidth="8"
+        android:strokeLineCap="round" />
+
+    <path
+        android:pathData="M191,405 L321,405"
+        android:strokeColor="#8A2387"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+        
+    <!-- Дополнительные элементы дизайна -->
+    <path
+        android:pathData="M150,380 L156,380 L156,386"
+        android:strokeColor="#E94057"
+        android:strokeWidth="8"
+        android:strokeLineCap="round" />
+        
+    <path
+        android:pathData="M356,380 L362,380 L362,386"
+        android:strokeColor="#E94057"
+        android:strokeWidth="8"
+        android:strokeLineCap="round" />
+
+    <path
+        android:pathData="M191,405 L185,405 L185,411"
+        android:strokeColor="#8A2387"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+        
+    <path
+        android:pathData="M321,405 L327,405 L327,411"
+        android:strokeColor="#8A2387"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+
+</vector> 

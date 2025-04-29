@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Здесь хранятся ссылки на URL картинок мемов -->
+    <string name="drake_hotline_bling_url">https://i.kym-cdn.com/photos/images/newsfeed/001/497/564/ed4.jpg</string>
+    <string name="distracted_boyfriend_url">https://i.kym-cdn.com/photos/images/newsfeed/001/287/580/f23.jpg</string>
+    <string name="expanding_brain_url">https://i.kym-cdn.com/photos/images/original/001/217/719/10a.jpg</string>
+    <string name="disaster_girl_url">https://i.kym-cdn.com/entries/icons/mobile/000/000/043/disaster-girl.jpg</string>
+    <string name="hide_pain_harold_url">https://i.kym-cdn.com/entries/icons/original/000/016/546/hidethepainharold.jpg</string>
+    <string name="doge_url">https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg</string>
+    <string name="success_kid_url">https://i.kym-cdn.com/entries/icons/original/000/005/393/IKIFEEL.jpg</string>
+    <string name="grumpy_cat_url">https://i.kym-cdn.com/entries/icons/original/000/011/365/GRUMPYCAT.jpg</string>
+    <string name="thinking_meme_url">https://i.kym-cdn.com/entries/icons/original/000/022/138/highresrollsafe.jpg</string>
+    <string name="roll_safe_url">https://i.kym-cdn.com/photos/images/newsfeed/001/217/932/4eb.jpg</string>
+    <string name="bad_luck_brian_url">https://i.kym-cdn.com/entries/icons/original/000/009/515/BadLuckBrian.jpg</string>
+    <string name="crying_jordan_url">https://i.kym-cdn.com/entries/icons/original/000/016/212/manning.png</string>
+    <string name="pepe_frog_url">https://i.kym-cdn.com/entries/icons/original/000/017/937/nsEjedV.jpg</string>
+    <string name="salt_bae_url">https://i.kym-cdn.com/entries/icons/original/000/021/971/saltbae.jpg</string>
+    <string name="this_is_fine_url">https://i.kym-cdn.com/photos/images/newsfeed/001/401/347/312.jpg</string>
+    <string name="one_does_not_simply_url">https://i.kym-cdn.com/entries/icons/original/000/000/326/SIMPIN.jpg</string>
+</resources> 

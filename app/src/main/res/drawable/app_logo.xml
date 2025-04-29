@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Фон -->
+    <path
+        android:pathData="M100,100m-95,0a95,95 0,1 1,190 0a95,95 0,1 1,-190 0"
+        android:fillColor="#0A0000"/>
+    
+    <!-- Кровавая окантовка -->
+    <path
+        android:pathData="M100,100m-92,0a92,92 0,1 1,184 0a92,92 0,1 1,-184 0"
+        android:strokeWidth="5"
+        android:strokeColor="#8C0101"
+        android:fillColor="#00000000"/>
+    
+    <!-- Правая карточка мема -->
+    <path
+        android:pathData="M135,50L135,150L185,150L185,50L135,50Z"
+        android:fillColor="#620000"/>
+    
+    <!-- Левая карточка мема -->
+    <path
+        android:pathData="M15,50L15,150L65,150L65,50L15,50Z"
+        android:fillColor="#920000"/>
+    
+    <!-- Средняя карточка мема -->
+    <path
+        android:pathData="M75,50L75,150L125,150L125,50L75,50Z"
+        android:fillColor="#380000"/>
+    
+    <!-- Капли крови -->
+    <path
+        android:pathData="M15,40L18,45L20,52L15,50Z"
+        android:fillColor="#FF0000"/>
+    
+    <path
+        android:pathData="M125,50L130,45L132,39L135,50Z"
+        android:fillColor="#FF0000"/>
+    
+    <path
+        android:pathData="M75,150L68,155L65,161L65,150Z"
+        android:fillColor="#FF0000"/>
+    
+    <path
+        android:pathData="M185,125L190,130L192,140L185,135Z"
+        android:fillColor="#FF0000"/>
+    
+    <!-- Рамка для карточек -->
+    <path
+        android:pathData="M15,50L15,150L65,150L65,50L15,50Z"
+        android:strokeWidth="4"
+        android:strokeColor="#000000"/>
+    
+    <path
+        android:pathData="M75,50L75,150L125,150L125,50L75,50Z"
+        android:strokeWidth="4"
+        android:strokeColor="#000000"/>
+    
+    <path
+        android:pathData="M135,50L135,150L185,150L185,50L135,50Z"
+        android:strokeWidth="4"
+        android:strokeColor="#000000"/>
+    
+    <!-- Смайлик на левой карточке -->
+    <path
+        android:pathData="M40,80m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
+        android:fillColor="#FF0000"/>
+    
+    <path
+        android:pathData="M40,110C30,110 30,120 40,120C50,120 50,110 40,110Z"
+        android:fillColor="#FF0000"/>
+    
+    <!-- Смайлик на средней карточке -->
+    <path
+        android:pathData="M100,80m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
+        android:fillColor="#FF0000"/>
+    
+    <path
+        android:pathData="M100,110C90,110 90,120 100,125C110,120 110,110 100,110Z"
+        android:fillColor="#FF0000"/>
+    
+    <!-- Смайлик на правой карточке -->
+    <path
+        android:pathData="M160,80m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
+        android:fillColor="#FF0000"/>
+    
+    <path
+        android:pathData="M160,120C170,120 170,110 160,110C150,110 150,120 160,120Z"
+        android:fillColor="#FF0000"/>
+</vector> 

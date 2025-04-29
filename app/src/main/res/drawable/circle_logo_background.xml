@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Внешняя тень -->
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:bottom="3dp"
+                android:left="3dp"
+                android:right="3dp"
+                android:top="3dp" />
+            <solid android:color="#70000000" />
+        </shape>
+    </item>
+    
+    <!-- Внешний круг с градиентом -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="180dp"
+                android:startColor="#3498DB"
+                android:endColor="#2980B9" />
+            <stroke
+                android:width="2dp"
+                android:color="#88FFFFFF" />
+        </shape>
+    </item>
+    
+    <!-- Внутренний светлый эффект -->
+    <item
+        android:top="20dp"
+        android:left="5dp"
+        android:right="20dp"
+        android:bottom="20dp">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="oval">
+                <gradient
+                    android:type="linear"
+                    android:startColor="#60FFFFFF"
+                    android:endColor="#00FFFFFF" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list> 
