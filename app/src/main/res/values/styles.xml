@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="CustomSwitchStyle">
-        <item name="android:thumb">@drawable/switch_thumb</item>
-        <item name="android:track">@drawable/switch_track</item>
-        <item name="android:switchMinWidth">48dp</item>
-        <item name="android:switchPadding">8dp</item>
+    <!-- Современный стиль для переключателей -->
+    <style name="CustomSwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:thumbTint">@color/white</item>
+        <item name="android:trackTint">@color/primary</item>
+    </style>
+    
+    <!-- Современный стиль для текстовых полей -->
+    <style name="ModernTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_large</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_large</item>
+        <item name="boxStrokeColor">@color/tertiary</item>
+        <item name="boxStrokeWidth">@dimen/stroke_regular</item>
+        <item name="hintTextColor">@color/secondary</item>
+        <item name="android:textColorHint">#CCFFFFFF</item>
+        <item name="endIconTint">@color/accent</item>
+    </style>
+    
+    <!-- Стиль для текстовых полей редактирования -->
+    <style name="ModernEditTextStyle" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="android:paddingTop">@dimen/spacing_normal</item>
+        <item name="android:paddingBottom">@dimen/spacing_normal</item>
+        <item name="android:paddingStart">@dimen/spacing_large</item>
+        <item name="android:paddingEnd">@dimen/spacing_large</item>
+        <item name="android:background">@null</item>
+    </style>
+    
+    <!-- Стиль для малых кнопок -->
+    <style name="ModernSmallButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:minHeight">@dimen/height_small_button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="cornerRadius">@dimen/radius_medium</item>
+        <item name="android:paddingStart">@dimen/spacing_large</item>
+        <item name="android:paddingEnd">@dimen/spacing_large</item>
+        <item name="elevation">@dimen/elevation_small</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/modern_button_background</item>
+        <item name="rippleColor">#33FFFFFF</item>
+    </style>
+    
+    <!-- Стиль для текстов заголовков -->
+    <style name="ModernHeadlineStyle">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+    
+    <!-- Стиль для больших заголовков -->
+    <style name="ModernTitleStyle">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+    
+    <!-- Стиль для текста в карточках -->
+    <style name="ModernBodyTextStyle">
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    
+    <!-- Стиль для элементов списка -->
+    <style name="ModernListItemStyle">
+        <item name="android:background">@drawable/modern_card_background</item>
+        <item name="android:padding">@dimen/spacing_large</item>
+        <item name="android:layout_marginTop">@dimen/spacing_medium</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_medium</item>
+        <item name="android:elevation">@dimen/elevation_small</item>
+    </style>
+    
+    <!-- Стиль для нижней навигации -->
+    <style name="ModernBottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">#AA121212</item>
+        <item name="itemIconTint">#FFFFFF</item>
+        <item name="itemTextColor">#FFFFFF</item>
+        <item name="itemRippleColor">#F27121</item>
+        <item name="elevation">8dp</item>
     </style>
 </resources> 

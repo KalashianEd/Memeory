@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Круглый фон с градиентом для элитного ранга -->
+    <path
+        android:fillColor="#7B1FA2"
+        android:pathData="M12,12m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"/>
+    
+    <!-- Стильная корона для элитного ранга -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M12,4L9,7L12,6L15,7L12,4z"/>
+    
+    <!-- Контур с эффектом свечения -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M12,12m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0"
+        android:strokeWidth="2"
+        android:strokeColor="#CE93D8"/>
+    
+    <!-- Стильное лицо со звездами в глазах -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M8,9m-1.2,0a1.2,1.2 0,1 1,2.4 0a1.2,1.2 0,1 1,-2.4 0"/>
+    
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M16,9m-1.2,0a1.2,1.2 0,1 1,2.4 0a1.2,1.2 0,1 1,-2.4 0"/>
+    
+    <!-- Звезды в глазах -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M8,9L7.6,8.4L7,8L7.6,7.6L8,7L8.4,7.6L9,8L8.4,8.4z"/>
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,9L15.6,8.4L15,8L15.6,7.6L16,7L16.4,7.6L17,8L16.4,8.4z"/>
+    
+    <!-- Улыбка с блестками -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M9,14Q12,17 15,14"
+        android:strokeWidth="2"
+        android:strokeColor="#FFD700"
+        android:strokeLineCap="round"/>
+    
+    <!-- Декоративные элементы -->
+    <path
+        android:fillColor="#CE93D8"
+        android:pathData="M6,11m-0.5,0a0.5,0.5 0,1 1,1 0a0.5,0.5 0,1 1,-1 0"/>
+    
+    <path
+        android:fillColor="#CE93D8"
+        android:pathData="M18,11m-0.5,0a0.5,0.5 0,1 1,1 0a0.5,0.5 0,1 1,-1 0"/>
+    
+    <path
+        android:fillColor="#CE93D8"
+        android:pathData="M12,18m-0.5,0a0.5,0.5 0,1 1,1 0a0.5,0.5 0,1 1,-1 0"/>
+</vector> 

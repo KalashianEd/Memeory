@@ -3,4 +3,32 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ic_launcher_background">#FFFFFF</color>
+    
+    <!-- Основная цветовая схема -->
+    <color name="primary">#8A2387</color>
+    <color name="primary_dark">#6A1B6A</color>
+    <color name="secondary">#F27121</color>
+    <color name="tertiary">#C471ED</color>
+    <color name="accent">#FF4E50</color>
+    
+    <!-- Ссылки на предыдущие имена цветов для обратной совместимости -->
+    <color name="colorPrimary">@color/primary</color>
+    <color name="colorPrimaryDark">@color/primary_dark</color>
+    <color name="colorAccent">@color/accent</color>
+
+    <!-- Нейтральные цвета -->
+    <color name="background_light">#F8F8F8</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="background_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    
+    <!-- Полупрозрачные цвета для наложений -->
+    <color name="overlay_light">#33FFFFFF</color>
+    <color name="overlay_dark">#66000000</color>
+    
+    <!-- Статусные цвета -->
+    <color name="success">#4CAF50</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FFC107</color>
+    <color name="info">#2196F3</color>
 </resources>

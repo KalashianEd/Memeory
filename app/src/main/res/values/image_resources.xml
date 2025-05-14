@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Здесь хранятся ссылки на URL картинок мемов -->
-    <string name="drake_hotline_bling_url">https://i.kym-cdn.com/photos/images/newsfeed/001/497/564/ed4.jpg</string>
-    <string name="distracted_boyfriend_url">https://i.kym-cdn.com/photos/images/newsfeed/001/287/580/f23.jpg</string>
-    <string name="expanding_brain_url">https://i.kym-cdn.com/photos/images/original/001/217/719/10a.jpg</string>
-    <string name="disaster_girl_url">https://i.kym-cdn.com/entries/icons/mobile/000/000/043/disaster-girl.jpg</string>
-    <string name="hide_pain_harold_url">https://i.kym-cdn.com/entries/icons/original/000/016/546/hidethepainharold.jpg</string>
-    <string name="doge_url">https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg</string>
-    <string name="success_kid_url">https://i.kym-cdn.com/entries/icons/original/000/005/393/IKIFEEL.jpg</string>
-    <string name="grumpy_cat_url">https://i.kym-cdn.com/entries/icons/original/000/011/365/GRUMPYCAT.jpg</string>
-    <string name="thinking_meme_url">https://i.kym-cdn.com/entries/icons/original/000/022/138/highresrollsafe.jpg</string>
-    <string name="roll_safe_url">https://i.kym-cdn.com/photos/images/newsfeed/001/217/932/4eb.jpg</string>
-    <string name="bad_luck_brian_url">https://i.kym-cdn.com/entries/icons/original/000/009/515/BadLuckBrian.jpg</string>
-    <string name="crying_jordan_url">https://i.kym-cdn.com/entries/icons/original/000/016/212/manning.png</string>
-    <string name="pepe_frog_url">https://i.kym-cdn.com/entries/icons/original/000/017/937/nsEjedV.jpg</string>
+    <string name="drake_hotline_bling_url">https://i.kym-cdn.com/entries/icons/original/000/020/147/drakeposting.jpg</string>
+    <string name="distracted_boyfriend_url">https://i.kym-cdn.com/entries/icons/original/000/023/682/distracted_boyfriend.jpg</string>
+    <string name="expanding_brain_url">https://i.kym-cdn.com/photos/images/newsfeed/001/346/175/48e.jpg</string>
+    <string name="disaster_girl_url">https://i.kym-cdn.com/entries/icons/original/000/000/043/disastergirl.jpg</string>
+    <string name="hide_pain_harold_url">https://i.kym-cdn.com/entries/icons/original/000/016/546/harold.jpg</string>
+    <string name="doge_url">https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg</string>
+    <string name="success_kid_url">https://i.kym-cdn.com/entries/icons/original/000/005/393/success.jpg</string>
+    <string name="grumpy_cat_url">https://upload.wikimedia.org/wikipedia/commons/8/8c/Grumpy_Cat_by_Gage_Skidmore.jpg</string>
+    <string name="thinking_meme_url">https://i.kym-cdn.com/entries/icons/original/000/022/138/rollsafe.jpg</string>
+    <string name="roll_safe_url">https://i.kym-cdn.com/entries/icons/original/000/022/138/rollsafe.jpg</string>
+    <string name="bad_luck_brian_url">https://i.kym-cdn.com/entries/icons/original/000/009/515/BLB.jpg</string>
+    <string name="crying_jordan_url">https://i.kym-cdn.com/entries/icons/original/000/016/075/cryingjordan.jpg</string>
+    <string name="pepe_frog_url">https://i.kym-cdn.com/entries/icons/original/000/000/142/pepe.jpg</string>
     <string name="salt_bae_url">https://i.kym-cdn.com/entries/icons/original/000/021/971/saltbae.jpg</string>
-    <string name="this_is_fine_url">https://i.kym-cdn.com/photos/images/newsfeed/001/401/347/312.jpg</string>
-    <string name="one_does_not_simply_url">https://i.kym-cdn.com/entries/icons/original/000/000/326/SIMPIN.jpg</string>
+    <string name="this_is_fine_url">https://i.kym-cdn.com/entries/icons/original/000/018/012/thisisfine.jpg</string>
+    <string name="one_does_not_simply_url">https://i.kym-cdn.com/entries/icons/original/000/000/326/onedoesnotsimply.jpg</string>
+    
+    <!-- Русские мемы -->
+    <string name="tolik_eto_podyezd_url">https://memepedia.ru/wp-content/uploads/2018/12/tolik-eto-podezd.jpg</string>
+    <string name="a_chto_esli_url">https://memepedia.ru/wp-content/uploads/2019/12/a-chto-esli.jpg</string>
+    <string name="nu_davay_rasskazhi_url">https://memepedia.ru/wp-content/uploads/2017/04/nu-davay-rasskazhi-mem.jpg</string>
+    <string name="vot_eto_povorot_url">https://www.meme-arsenal.com/memes/e76d8dc2fee30a0dad1f13e63e9ff0d8.jpg</string>
+    <string name="chto_proishodit_url">https://memepedia.ru/wp-content/uploads/2019/12/30124514-1-768x766.jpg</string>
+    <string name="zhduun_url">https://memepedia.ru/wp-content/uploads/2017/02/zhdun.jpg</string>
+    <string name="v_etom_ves_ya_url">https://i.kym-cdn.com/photos/images/newsfeed/002/652/454/274.jpg</string>
+    <string name="ne_smeshite_moi_tapki_url">https://memepedia.ru/wp-content/uploads/2023/12/tinkov-ocenivaet-chto-libo.jpg</string>
+    <string name="khitriy_getsbi_url">https://memepedia.ru/wp-content/uploads/2024/07/ryan-gosling-meme.jpeg</string>
+    <string name="nedoverie_frai_url">https://memepedia.ru/wp-content/uploads/2019/12/nedoverie-fraja.jpg</string>
 </resources> 

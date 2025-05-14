@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Мемори</string>
-    <string name="app_tagline">Кровавая битва за мемы!</string>
+    <string name="app_name">Memeory</string>
+    <string name="app_tagline">Битва за мемы!</string>
     <string name="app_logo">Логотип приложения</string>
     <string name="meme_image">Изображение мема</string>
     <string name="question_what_meme">Как называется этот мем?</string>
@@ -64,20 +64,244 @@
     <string name="best_streak">Рекорд: %d 🏆</string>
     <string name="current_level">Уровень: %d 📈</string>
     
-    <!-- Названия мемов на русском -->
-    <string name="drake_hotline_bling">Дрейк</string>
-    <string name="distracted_boyfriend">Неверный парень</string>
-    <string name="expanding_brain">Расширяющийся мозг</string>
-    <string name="disaster_girl">Девочка-катастрофа</string>
-    <string name="hide_pain_harold">Гарольд скрывающий боль</string>
-    <string name="doge">Собака Doge</string>
-    <string name="success_kid">Успешный малыш</string>
-    <string name="grumpy_cat">Сердитый кот</string>
-    <string name="roll_safe">Думающий парень</string>
-    <string name="bad_luck_brian">Неудачник Брайан</string>
-    <string name="crying_jordan">Плачущий Джордан</string>
-    <string name="pepe_frog">Лягушонок Пепе</string>
-    <string name="salt_bae">Солящий повар</string>
-    <string name="this_is_fine">Всё нормально</string>
-    <string name="one_does_not_simply">Боромир</string>
+    <!-- Названия мемов на русском и английском -->
+    <string name="drake_hotline_bling">Drake (Дрейк)</string>
+    <string name="distracted_boyfriend">Distracted Boyfriend (Неверный парень)</string>
+    <string name="expanding_brain">Expanding Brain (Расширяющийся мозг)</string>
+    <string name="disaster_girl">Disaster Girl (Девочка-катастрофа)</string>
+    <string name="hide_pain_harold">Hide the Pain Harold (Гарольд, скрывающий боль)</string>
+    <string name="doge">Doge (Собака Doge)</string>
+    <string name="success_kid">Success Kid (Успешный малыш)</string>
+    <string name="grumpy_cat">Grumpy Cat (Сердитый кот)</string>
+    <string name="roll_safe">Roll Safe (Думающий парень)</string>
+    <string name="bad_luck_brian">Bad Luck Brian (Неудачник Брайан)</string>
+    <string name="crying_jordan">Crying Jordan (Плачущий Джордан)</string>
+    <string name="pepe_frog">Pepe the Frog (Лягушонок Пепе)</string>
+    <string name="salt_bae">Salt Bae (Солящий повар)</string>
+    <string name="this_is_fine">This is Fine (Всё в порядке)</string>
+    <string name="one_does_not_simply">One Does Not Simply (Боромир/Нельзя просто так)</string>
+    <string name="coffin_dance">Coffin Dance (Танцующие с гробом)</string>
+    <string name="hide_the_pain_harold">Hide the Pain Harold (Гарольд, скрывающий боль)</string>
+    
+    <!-- Форматирование строк для статистики -->
+    <string name="level_format">Уровень: %d</string>
+    <string name="streak_format">%d ответов подряд</string>
+    <string name="score_percentage_format">%d%%</string>
+    
+    <!-- Ранги -->
+    <string name="rank_skuf">Скуф</string>
+    <string name="rank_znatok">Знаток</string>
+    <string name="rank_altuska">Альтушка</string>
+    
+    <!-- Описания рангов -->
+    <string name="rank_skuf_desc">Новичок в мире мемов. Вы только начинаете свой путь.</string>
+    <string name="rank_znatok_desc">Вы хорошо разбираетесь в мемах, но есть куда расти!</string>
+    <string name="rank_altuska_desc">Легенда мемов! Вы знаете все мемы и их происхождение.</string>
+    
+    <!-- Подсказки рангов -->
+    <string name="next_rank_progress">Прогресс до следующего ранга</string>
+    <string name="next_rank_info">До ранга "%1$s": %2$d правильных ответов подряд</string>
+    <string name="max_rank_reached">Максимальный ранг достигнут!</string>
+    
+    <!-- Строки для главного экрана -->
+    <string name="welcome_user">Привет, %s!</string>
+    <string name="current_rank">Ваш ранг: %s</string>
+    
+    <!-- Распространенные мемы для поля "name" -->
+    <string name="drake">Дрейк</string>
+    <string name="trump">Трамп</string>
+    <string name="change_my_mind">Попробуй переубедить</string>
+    <string name="surprised_pikachu">Удивленный Пикачу</string>
+    <string name="woman_yelling_at_cat">Женщина кричит на кота</string>
+    <string name="confused_math_lady">Озадаченная леди</string>
+    <string name="black_guy_hiding">Чернокожий прячется</string>
+    <string name="stonks">Стонкс</string>
+    
+    <!-- Русские мемы -->
+    <string name="tolik_eto_podyezd">Толик это подъезд</string>
+    <string name="a_chto_esli">А что если?</string>
+    <string name="nu_davay_rasskazhi">Ну давай, расскажи</string>
+    <string name="vot_eto_povorot">Вот это поворот</string>
+    <string name="zhduun">Ждун</string>
+    <string name="chto_proishodit">Что происходит?</string>
+    <string name="v_etom_ves_ya">Chill Guy (Чилл гай)</string>
+    <string name="ne_smeshite_moi_tapki">Тиньков оценивает</string>
+    <string name="khitriy_getsbi">Невозмутимый Райан Гослинг</string>
+    <string name="nedoverie_frai">Недоверчивый Фрай</string>
+    
+    <!-- Вопросы и ответы для мемов -->
+    <string name="q_bad_luck_brian">Что обычно изображает мем с "Неудачником Брайаном"?</string>
+    <string name="q_bad_luck_brian_a">Удачные совпадения</string>
+    <string name="q_bad_luck_brian_b">Парадоксы логики</string>
+    <string name="q_bad_luck_brian_c">Курьезные неудачи</string>
+    <string name="q_bad_luck_brian_d">Победы в соревнованиях</string>
+    <string name="q_bad_luck_brian_correct">в</string>
+    
+    <string name="q_disaster_girl">Почему "Девочка-катастрофа" улыбается на фоне горящего дома?</string>
+    <string name="q_disaster_girl_a">Она поджигатель</string>
+    <string name="q_disaster_girl_b">Это постановочное фото с сюрпризом</string>
+    <string name="q_disaster_girl_c">Её радость — часть контраста ироничного мема</string>
+    <string name="q_disaster_girl_d">Дом её врагов</string>
+    <string name="q_disaster_girl_correct">в</string>
+    
+    <string name="q_distracted_boyfriend">Что символизируют персонажи на меме "Неверный парень"?</string>
+    <string name="q_distracted_boyfriend_a">Треугольник любовных отношений</string>
+    <string name="q_distracted_boyfriend_b">Невнимательность на работе</string>
+    <string name="q_distracted_boyfriend_c">Выбор между старым и новым</string>
+    <string name="q_distracted_boyfriend_d">Конфликт друзей</string>
+    <string name="q_distracted_boyfriend_correct">в</string>
+    
+    <string name="q_doge">Какой стиль речи используется в меме Doge?</string>
+    <string name="q_doge_a">Высокий стиль с архаизмами</string>
+    <string name="q_doge_b">Ломаный английский с простыми выражениями</string>
+    <string name="q_doge_c">Научный стиль</string>
+    <string name="q_doge_d">Поэтический язык</string>
+    <string name="q_doge_correct">б</string>
+    
+    <string name="q_drake_hotline_bling">Что делает Дрейк в популярном меме?</string>
+    <string name="q_drake_hotline_bling_a">Танцует под свою песню</string>
+    <string name="q_drake_hotline_bling_b">Сравнивает два варианта, отвергая один и принимая другой</string>
+    <string name="q_drake_hotline_bling_c">Улыбается на фоне</string>
+    <string name="q_drake_hotline_bling_d">Поднимает тост</string>
+    <string name="q_drake_hotline_bling_correct">б</string>
+    
+    <string name="q_expanding_brain">Что обозначает увеличение мозга в этом меме?</string>
+    <string name="q_expanding_brain_a">Рост интеллекта</string>
+    <string name="q_expanding_brain_b">Увеличение гнева</string>
+    <string name="q_expanding_brain_c">Усталость</string>
+    <string name="q_expanding_brain_d">Боль</string>
+    <string name="q_expanding_brain_correct">а</string>
+    
+    <string name="q_hide_pain_harold">Что символизирует выражение лица Гарольда?</string>
+    <string name="q_hide_pain_harold_a">Радость</string>
+    <string name="q_hide_pain_harold_b">Подозрение</string>
+    <string name="q_hide_pain_harold_c">Вежливую грусть</string>
+    <string name="q_hide_pain_harold_d">Скрытую боль за улыбкой</string>
+    <string name="q_hide_pain_harold_correct">г</string>
+    
+    <string name="q_grumpy_cat">Почему Grumpy Cat стал популярен?</string>
+    <string name="q_grumpy_cat_a">Он мяукает на камеру</string>
+    <string name="q_grumpy_cat_b">Он выглядит постоянно сердитым</string>
+    <string name="q_grumpy_cat_c">Он умеет говорить</string>
+    <string name="q_grumpy_cat_d">Его спасли с улицы</string>
+    <string name="q_grumpy_cat_correct">б</string>
+    
+    <string name="q_crying_jordan">Как используется лицо плачущего Майкла Джордана?</string>
+    <string name="q_crying_jordan_a">Чтобы показать грусть и поражение</string>
+    <string name="q_crying_jordan_b">Чтобы выразить радость</string>
+    <string name="q_crying_jordan_c">В контексте спортивных побед</string>
+    <string name="q_crying_jordan_d">Для пародии на фильмы</string>
+    <string name="q_crying_jordan_correct">а</string>
+    
+    <string name="q_success_kid">Что изображает мем с "Успешным малышом"?</string>
+    <string name="q_success_kid_a">Малыша, уронившего игрушку</string>
+    <string name="q_success_kid_b">Ребенка, который плачет</string>
+    <string name="q_success_kid_c">Малыша с жестом победы</string>
+    <string name="q_success_kid_d">Спящего младенца</string>
+    <string name="q_success_kid_correct">в</string>
+    
+    <string name="q_roll_safe">Что символизирует жест у виска в этом меме?</string>
+    <string name="q_roll_safe_a">Страх</string>
+    <string name="q_roll_safe_b">Умный, но ошибочный ход</string>
+    <string name="q_roll_safe_c">Ловкий трюк</string>
+    <string name="q_roll_safe_d">Саркастичное "умное" решение</string>
+    <string name="q_roll_safe_correct">г</string>
+    
+    <string name="q_coffin_dance">Откуда появился мем "Танцующие с гробом"?</string>
+    <string name="q_coffin_dance_a">Из европейского клипа</string>
+    <string name="q_coffin_dance_b">С похорон в Гане</string>
+    <string name="q_coffin_dance_c">Из компьютерной игры</string>
+    <string name="q_coffin_dance_d">Из сериала</string>
+    <string name="q_coffin_dance_correct">б</string>
+    
+    <string name="q_one_does_not_simply">Из какого фильма сцена с "One does not simply walk into Mordor"?</string>
+    <string name="q_one_does_not_simply_a">Гарри Поттер</string>
+    <string name="q_one_does_not_simply_b">Игра престолов</string>
+    <string name="q_one_does_not_simply_c">Властелин колец</string>
+    <string name="q_one_does_not_simply_d">Хоббит</string>
+    <string name="q_one_does_not_simply_correct">в</string>
+    
+    <string name="q_pepe_frog">Как изначально появился лягушонок Пепе?</string>
+    <string name="q_pepe_frog_a">Как персонаж комиксов</string>
+    <string name="q_pepe_frog_b">Как герой мультфильма</string>
+    <string name="q_pepe_frog_c">Как эмодзи</string>
+    <string name="q_pepe_frog_d">Как персонаж видеоигры</string>
+    <string name="q_pepe_frog_correct">а</string>
+    
+    <string name="q_salt_bae">Чем прославился повар Salt Bae?</string>
+    <string name="q_salt_bae_a">Готовкой пиццы</string>
+    <string name="q_salt_bae_b">Уникальным способом посыпать соль</string>
+    <string name="q_salt_bae_c">Стрижкой</string>
+    <string name="q_salt_bae_d">Танцами с едой</string>
+    <string name="q_salt_bae_correct">б</string>
+    
+    <string name="q_woman_yelling_at_cat">Что делает мем "Женщина кричит на кота" забавным?</string>
+    <string name="q_woman_yelling_at_cat_a">Игра слов</string>
+    <string name="q_woman_yelling_at_cat_b">Контраст эмоций женщины и безразличного кота</string>
+    <string name="q_woman_yelling_at_cat_c">Использование знаменитостей</string>
+    <string name="q_woman_yelling_at_cat_d">Необычный фон</string>
+    <string name="q_woman_yelling_at_cat_correct">б</string>
+    
+    <string name="q_a_chto_esli">Что делает персонаж в меме «А что если?»?</string>
+    <string name="q_a_chto_esli_a">Спрашивает очевидное</string>
+    <string name="q_a_chto_esli_b">Предполагает нелогичную, но забавную идею</string>
+    <string name="q_a_chto_esli_c">Делает серьезное заявление</string>
+    <string name="q_a_chto_esli_d">Удивляется происходящему</string>
+    <string name="q_a_chto_esli_correct">б</string>
+    
+    <string name="q_chto_proishodit">В каком контексте обычно используется мем «Что происходит?»</string>
+    <string name="q_chto_proishodit_a">Когда всё идёт по плану</string>
+    <string name="q_chto_proishodit_b">При неожиданной и абсурдной ситуации</string>
+    <string name="q_chto_proishodit_c">Когда ничего не меняется</string>
+    <string name="q_chto_proishodit_d">При просмотре новостей</string>
+    <string name="q_chto_proishodit_correct">б</string>
+    
+    <string name="q_nedoverie_frai">Какую эмоцию выражает "Недоверчивый Фрай"?</string>
+    <string name="q_nedoverie_frai_a">Радость</string>
+    <string name="q_nedoverie_frai_b">Злость</string>
+    <string name="q_nedoverie_frai_c">Сомнение и подозрение</string>
+    <string name="q_nedoverie_frai_d">Удивление</string>
+    <string name="q_nedoverie_frai_correct">в</string>
+    
+    <string name="q_ne_smeshite_moi_tapki">Что делает Олег Тиньков в меме «Тиньков оценивает»?</string>
+    <string name="q_ne_smeshite_moi_tapki_a">Рассказывает анекдоты</string>
+    <string name="q_ne_smeshite_moi_tapki_b">Даёт финансовые советы</string>
+    <string name="q_ne_smeshite_moi_tapki_c">Сравнивает вещи и выносит субъективную оценку</string>
+    <string name="q_ne_smeshite_moi_tapki_d">Критикует конкурентов</string>
+    <string name="q_ne_smeshite_moi_tapki_correct">в</string>
+    
+    <string name="q_nu_davay_rasskazhi">Что выражает фраза «Ну давай, расскажи» в мемах?</string>
+    <string name="q_nu_davay_rasskazhi_a">Искренний интерес</string>
+    <string name="q_nu_davay_rasskazhi_b">Усталость от спора</string>
+    <string name="q_nu_davay_rasskazhi_c">Агрессию</string>
+    <string name="q_nu_davay_rasskazhi_d">Саркастическое ожидание глупого объяснения</string>
+    <string name="q_nu_davay_rasskazhi_correct">г</string>
+    
+    <string name="q_tolik_eto_podyezd">Что обычно подразумевается под фразой «Толик, это подъезд»?</string>
+    <string name="q_tolik_eto_podyezd_a">Толик не туда пошёл</string>
+    <string name="q_tolik_eto_podyezd_b">Шутка о странной логике</string>
+    <string name="q_tolik_eto_podyezd_c">Абсурдная сцена из видеозаписи</string>
+    <string name="q_tolik_eto_podyezd_d">Призыв к порядку</string>
+    <string name="q_tolik_eto_podyezd_correct">в</string>
+    
+    <string name="q_v_etom_ves_ya">Что делает персонаж в меме «Чилл гай»?</string>
+    <string name="q_v_etom_ves_ya_a">Панически реагирует</string>
+    <string name="q_v_etom_ves_ya_b">Убегает от опасности</string>
+    <string name="q_v_etom_ves_ya_c">Спокойно принимает любую ситуацию</string>
+    <string name="q_v_etom_ves_ya_d">Злится на происходящее</string>
+    <string name="q_v_etom_ves_ya_correct">в</string>
+    
+    <string name="q_vot_eto_povorot">Когда используется фраза «Вот это поворот»?</string>
+    <string name="q_vot_eto_povorot_a">При предсказуемой ситуации</string>
+    <string name="q_vot_eto_povorot_b">Когда что-то идёт по плану</string>
+    <string name="q_vot_eto_povorot_c">При неожиданной развязке</string>
+    <string name="q_vot_eto_povorot_d">Когда всё остаётся без изменений</string>
+    <string name="q_vot_eto_povorot_correct">в</string>
+    
+    <string name="q_zhduun">Что символизирует мем «Ждун»?</string>
+    <string name="q_zhduun_a">Человека, который торопится</string>
+    <string name="q_zhduun_b">Ожидание с терпением и безысходностью</string>
+    <string name="q_zhduun_c">Радость от праздника</string>
+    <string name="q_zhduun_d">Грусть из-за одиночества</string>
+    <string name="q_zhduun_correct">б</string>
 </resources>

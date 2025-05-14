@@ -38,9 +38,28 @@ dependencies {
     
     // Firebase Authentication
     implementation(libs.firebase.auth)
+    
+    // Добавляем явную зависимость на Google Play Services
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.android.gms:play-services-base:18.3.0")
+
+    // CircleImageView для круглых аватаров
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    
+    // Navigation Component
+    implementation("androidx.navigation:navigation-fragment:2.7.7")
+    implementation("androidx.navigation:navigation-ui:2.7.7")
+
+    // Glide для загрузки изображений
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+    
+    // OkHttp для интеграции с Glide
+    implementation("com.github.bumptech.glide:okhttp3-integration:4.16.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     implementation(libs.appcompat)
-    implementation(libs.material)
+    // Material Components (одна зависимость вместо двух)
     implementation("com.google.android.material:material:1.11.0")
     
     implementation(libs.activity)

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Фон -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M0,0 L200,0 L200,200 L0,200 Z" />
+    
+    <!-- Текст "TEST" -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,80 L50,70 L70,70 L70,80 L60,80 L60,90 L70,90 L70,100 L50,100 L50,90 L60,90 L60,80 L50,80 
+                           M80,70 L100,70 L100,80 L90,80 L90,100 L80,100 L80,70
+                           M110,70 L130,70 L130,80 L120,80 L120,90 L130,90 L130,100 L110,100 L110,90 L120,90 L120,80 L110,80 L110,70
+                           M140,70 L150,70 L150,100 L140,100 L140,70" />
+    
+    <!-- Круг для отладочных целей -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M100,130 A20,20 0 1,0 100,170 A20,20 0 1,0 100,130" />
+</vector> 

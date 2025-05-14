@@ -22,21 +22,26 @@ public class AuthManager {
     private static AuthManager instance;
 
     public AuthManager(Context context) {
-        mAuth = FirebaseAuth.getInstance();
-        mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
-        
-        // Проверка, что анонимная аутентификация включена
-        if (mAuth.getCurrentUser() == null) {
-            mAuth.signInAnonymously()
-                    .addOnSuccessListener(authResult -> {
-                        Log.d(TAG, "Анонимная аутентификация успешно включена");
-                    })
-                    .addOnFailureListener(e -> {
-                        Log.e(TAG, "Ошибка анонимной аутентификации: " + e.getMessage());
-                    });
+        try {
+            mAuth = FirebaseAuth.getInstance();
+            
+            // Отключаем проверку телефона только для тестирования
+            // Это может быть причиной ошибки безопасности
+            // mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
+            
+            mFirestore = FirebaseFirestore.getInstance();
+            Log.d(TAG, "AuthManager успешно инициализирован");
+        } catch (Exception e) {
+            Log.e(TAG, "Ошибка при инициализации AuthManager: " + e.getMessage(), e);
+            // Повторная попытка инициализации в случае ошибки
+            try {
+                mAuth = FirebaseAuth.getInstance();
+                mFirestore = FirebaseFirestore.getInstance();
+                Log.d(TAG, "AuthManager инициализирован со второй попытки");
+            } catch (Exception ex) {
+                Log.e(TAG, "Критическая ошибка при инициализации AuthManager: " + ex.getMessage(), ex);
+            }
         }
-        
-        mFirestore = FirebaseFirestore.getInstance();
     }
 
     public static synchronized AuthManager getInstance(Context context) {
@@ -60,87 +65,49 @@ public class AuthManager {
     }
 
     public void registerUser(String username, String email, String password, OnAuthResultListener listener) {
-        mAuth.signInAnonymously()
-            .addOnCompleteListener(anonTask -> {
-                if (anonTask.isSuccessful() && anonTask.getResult() != null) {
-                    FirebaseUser user = anonTask.getResult().getUser();
-                    if (user != null) {
-                        AuthCredential credential = EmailAuthProvider.getCredential(email, password);
-                        
-                        user.linkWithCredential(credential)
-                            .addOnCompleteListener(linkTask -> {
-                                if (linkTask.isSuccessful() && linkTask.getResult() != null) {
-                                    FirebaseUser linkedUser = linkTask.getResult().getUser();
-                                    
-                                    UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
-                                        .setDisplayName(username)
-                                        .build();
-                                    
-                                    linkedUser.updateProfile(profileUpdates)
-                                        .addOnCompleteListener(profileTask -> {
-                                            if (profileTask.isSuccessful()) {
-                                                User userModel = new User(linkedUser.getUid(), username, email);
-                                                mFirestore.collection("users")
-                                                    .document(linkedUser.getUid())
-                                                    .set(userModel)
-                                                    .addOnSuccessListener(aVoid -> {
-                                                        Log.d(TAG, "User profile created successfully");
-                                                        listener.onSuccess(linkedUser);
-                                                    })
-                                                    .addOnFailureListener(e -> {
-                                                        Log.e(TAG, "Error creating user profile", e);
-                                                        listener.onFailure(e.getMessage());
-                                                    });
-                                            } else {
-                                                Log.e(TAG, "Error updating user profile", profileTask.getException());
-                                                listener.onFailure("Ошибка при обновлении профиля пользователя");
-                                            }
-                                        });
-                                } else {
-                                    Log.e(TAG, "Error linking anonymous user", linkTask.getException());
-                                    listener.onFailure("Ошибка при связывании анонимного пользователя с Email");
-                                }
-                            });
-                    } else {
-                        listener.onFailure("Не удалось создать анонимного пользователя");
-                    }
-                } else {
-                    String errorMessage = anonTask.getException() != null ? 
-                        anonTask.getException().getMessage() : "Неизвестная ошибка при анонимной регистрации";
-                    Log.e(TAG, "Anonymous registration failed: " + errorMessage);
-                    listener.onFailure(errorMessage);
-                }
-            });
-    }
-
-    public void registerUserOriginal(String username, String email, String password, OnAuthResultListener listener) {
+        // Используем прямой метод создания пользователя без анонимной авторизации
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful() && task.getResult() != null) {
                         FirebaseUser firebaseUser = task.getResult().getUser();
                         if (firebaseUser != null) {
-                            // Отправляем письмо с подтверждением
-                            sendEmailVerification(firebaseUser, success -> {
-                                if (success) {
-                                    // Создаем запись пользователя в Firestore
-                                    User user = new User(firebaseUser.getUid(), username, email);
-                                    mFirestore.collection("users")
-                                            .document(firebaseUser.getUid())
-                                            .set(user)
-                                            .addOnSuccessListener(aVoid -> {
-                                                Log.d(TAG, "User profile created successfully");
-                                                listener.onSuccess(firebaseUser);
-                                            })
-                                            .addOnFailureListener(e -> {
-                                                Log.e(TAG, "Error creating user profile", e);
-                                                // Если не удалось создать профиль, удаляем пользователя из аутентификации
-                                                firebaseUser.delete();
-                                                listener.onFailure(e.getMessage());
-                                            });
-                                } else {
-                                    listener.onFailure("Не удалось отправить письмо для подтверждения");
-                                }
-                            });
+                            // Отправляем письмо для верификации email
+                            firebaseUser.sendEmailVerification()
+                                .addOnCompleteListener(verificationTask -> {
+                                    if (!verificationTask.isSuccessful()) {
+                                        Log.e(TAG, "Failed to send verification email", verificationTask.getException());
+                                    } else {
+                                        Log.d(TAG, "Verification email sent");
+                                    }
+                                });
+                                
+                            // Сразу сообщаем об успехе после создания пользователя и отправки письма
+                            // чтобы не блокировать UI ожиданием завершения других операций
+                            listener.onSuccess(firebaseUser);
+                                
+                            // Устанавливаем имя пользователя после отправки успешного результата
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(username)
+                                    .build();
+                            
+                            firebaseUser.updateProfile(profileUpdates)
+                                .addOnCompleteListener(profileTask -> {
+                                    if (profileTask.isSuccessful()) {
+                                        // Создаем запись пользователя в Firestore
+                                        User user = new User(firebaseUser.getUid(), username, email);
+                                        mFirestore.collection("users")
+                                                .document(firebaseUser.getUid())
+                                                .set(user)
+                                                .addOnSuccessListener(aVoid -> {
+                                                    Log.d(TAG, "User profile created successfully");
+                                                })
+                                                .addOnFailureListener(e -> {
+                                                    Log.e(TAG, "Error creating user profile", e);
+                                                });
+                                    } else {
+                                        Log.e(TAG, "Error updating user profile", profileTask.getException());
+                                    }
+                                });
                         } else {
                             listener.onFailure("Failed to create user");
                         }

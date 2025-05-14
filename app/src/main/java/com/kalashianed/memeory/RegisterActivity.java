@@ -2,6 +2,8 @@ package com.kalashianed.memeory;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -19,11 +21,16 @@ import com.kalashianed.memeory.auth.AuthManager;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    private static final String TAG = "RegisterActivity";
+    private static final int REGISTRATION_TIMEOUT = 10000; // 10 секунд таймаут
+
     private TextInputEditText nameEditText, emailEditText, passwordEditText, confirmPasswordEditText;
     private Button registerButton;
     private TextView loginTextView;
     private ProgressBar progressBar;
     private AuthManager authManager;
+    private Handler handler;
+    private Runnable timeoutRunnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         // Инициализация AuthManager
         authManager = AuthManager.getInstance(this);
+        handler = new Handler(Looper.getMainLooper());
 
         // Инициализация UI элементов
         nameEditText = findViewById(R.id.nameEditText);
@@ -41,6 +49,18 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton = findViewById(R.id.registerButton);
         loginTextView = findViewById(R.id.loginTextView);
         progressBar = findViewById(R.id.progressBar);
+
+        // Создаем таймаут для регистрации
+        timeoutRunnable = () -> {
+            if (progressBar.getVisibility() == View.VISIBLE) {
+                Log.w(TAG, "Регистрация заняла слишком много времени, прерывание операции");
+                progressBar.setVisibility(View.GONE);
+                registerButton.setEnabled(true);
+                Toast.makeText(RegisterActivity.this, 
+                        "Регистрация заняла слишком много времени. Проверьте свою почту, возможно, регистрация прошла успешно.", 
+                        Toast.LENGTH_LONG).show();
+            }
+        };
 
         // Обработчик нажатия на кнопку регистрации
         registerButton.setOnClickListener(v -> {
@@ -80,17 +100,23 @@ public class RegisterActivity extends AppCompatActivity {
             progressBar.setVisibility(View.VISIBLE);
             registerButton.setEnabled(false);
             
+            // Устанавливаем таймаут на регистрацию
+            handler.postDelayed(timeoutRunnable, REGISTRATION_TIMEOUT);
+            
             // Выводим дополнительную информацию для отладки
-            Log.d("RegisterActivity", "Attempting to register user with email: " + email);
+            Log.d(TAG, "Attempting to register user with email: " + email);
             
             // Регистрация пользователя
             authManager.registerUser(name, email, password, new AuthManager.OnAuthResultListener() {
                 @Override
                 public void onSuccess(FirebaseUser user) {
+                    // Отменяем таймаут
+                    handler.removeCallbacks(timeoutRunnable);
+                    
                     progressBar.setVisibility(View.GONE);
                     registerButton.setEnabled(true);
                     
-                    Log.d("RegisterActivity", "Registration successful for user: " + user.getUid());
+                    Log.d(TAG, "Registration successful for user: " + user.getUid());
                     
                     // Показываем диалог с информацией о верификации email
                     showEmailVerificationDialog(email);
@@ -98,10 +124,13 @@ public class RegisterActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(String errorMessage) {
+                    // Отменяем таймаут
+                    handler.removeCallbacks(timeoutRunnable);
+                    
                     progressBar.setVisibility(View.GONE);
                     registerButton.setEnabled(true);
                     
-                    Log.e("RegisterActivity", "Registration failed: " + errorMessage);
+                    Log.e(TAG, "Registration failed: " + errorMessage);
                     
                     // Показываем более подробное сообщение об ошибке
                     Toast.makeText(RegisterActivity.this, "Ошибка регистрации: " + errorMessage, Toast.LENGTH_LONG).show();
@@ -113,6 +142,15 @@ public class RegisterActivity extends AppCompatActivity {
         loginTextView.setOnClickListener(v -> {
             finish(); // Возвращаемся на экран входа
         });
+    }
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Отменяем все отложенные задачи при уничтожении активности
+        if (handler != null && timeoutRunnable != null) {
+            handler.removeCallbacks(timeoutRunnable);
+        }
     }
     
     /**

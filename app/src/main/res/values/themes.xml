@@ -1,22 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Стиль для кнопок -->
+    <style name="ModernButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:minHeight">@dimen/height_button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+        <item name="android:paddingStart">@dimen/spacing_xlarge</item>
+        <item name="android:paddingEnd">@dimen/spacing_xlarge</item>
+        <item name="elevation">@dimen/elevation_medium</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/modern_button_background</item>
+        <item name="rippleColor">#33FFFFFF</item>
+    </style>
+    
+    <!-- Стиль для карточек -->
+    <style name="ModernCardStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/radius_xlarge</item>
+        <item name="cardElevation">@dimen/elevation_medium</item>
+        <item name="cardBackgroundColor">#33FFFFFF</item>
+        <item name="strokeColor">#22FFFFFF</item>
+        <item name="strokeWidth">@dimen/stroke_regular</item>
+        <item name="contentPadding">@dimen/spacing_large</item>
+        <item name="rippleColor">#33FFFFFF</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
     <!-- Base application theme. -->
     <style name="Base.Theme.Memeory" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">#8A2387</item>
-        <item name="colorPrimaryDark">#8A2387</item>
-        <item name="colorAccent">#F27121</item>
-        <item name="android:statusBarColor">#8A2387</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorSecondary">@color/secondary</item>
+        
+        <!-- Статус-бар и навигационная панель -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
         <item name="android:windowBackground">@drawable/gradient_bg_1</item>
-        <item name="android:navigationBarColor">#8A2387</item>
-        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        
+        <!-- Шрифты и цвета текста -->
+        <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorSecondary">#E0FFFFFF</item>
-        <item name="switchStyle">@style/CustomSwitchStyle</item>
         <item name="android:fontFamily">sans-serif-light</item>
+        <item name="fontFamily">sans-serif-light</item>
+        
+        <!-- Системные кнопки -->
+        <item name="switchStyle">@style/Widget.AppCompat.CompoundButton.Switch</item>
         <item name="android:windowLightStatusBar">false</item>
+        
+        <!-- Анимации переходов -->
         <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/slide_bottom</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+        
+        <!-- Настройки Material Components -->
+        <item name="materialButtonStyle">@style/ModernButtonStyle</item>
+        <item name="textInputStyle">@style/ModernTextInputStyle</item>
+        <item name="editTextStyle">@style/ModernEditTextStyle</item>
+        <item name="bottomNavigationStyle">@style/ModernBottomNavigationStyle</item>
+        <item name="cardViewStyle">@style/ModernCardStyle</item>
+        <item name="materialCardViewStyle">@style/ModernCardStyle</item>
     </style>
 
-    <style name="Theme.Memeory" parent="Base.Theme.Memeory" />
+    <style name="Theme.Memeory" parent="Base.Theme.Memeory">
+        <!-- Дополнительные настройки для конкретной темы -->
+    </style>
     
     <style name="SplashTheme" parent="Theme.Memeory">
         <item name="android:windowBackground">@drawable/splash_gradient_background</item>
@@ -25,28 +76,7 @@
     </style>
     
     <style name="WindowAnimationTransitionStyle">
-        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
-    
-    <style name="CardViewStyle">
-        <item name="cardCornerRadius">16dp</item>
-        <item name="cardElevation">4dp</item>
-        <item name="cardBackgroundColor">#33FFFFFF</item>
-        <item name="contentPadding">16dp</item>
-        <item name="cardPreventCornerOverlap">true</item>
-        <item name="cardUseCompatPadding">true</item>
-    </style>
-    
-    <style name="ButtonStyle">
-        <item name="android:background">@drawable/button_background</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:paddingStart">20dp</item>
-        <item name="android:paddingEnd">20dp</item>
-        <item name="android:paddingTop">12dp</item>
-        <item name="android:paddingBottom">12dp</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-    </style>
-</resources>
+</resources> 

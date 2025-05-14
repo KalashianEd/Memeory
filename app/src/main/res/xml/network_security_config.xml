@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Разрешаем очищенный HTTP-трафик для всех доменов -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <!-- Доверие системным сертификатам -->
+            <certificates src="system" />
+            <!-- Доверие пользовательским сертификатам (для отладки) -->
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+    
+    <!-- Особые настройки для доменов с мемами -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">i.kym-cdn.com</domain>
+        <domain includeSubdomains="true">memepedia.ru</domain>
+        <domain includeSubdomains="true">upload.wikimedia.org</domain>
+        <domain includeSubdomains="true">www.meme-arsenal.com</domain>
+        <domain includeSubdomains="true">avatars.dzeninfra.ru</domain>
+        <domain includeSubdomains="true">s1.hostingkartinok.com</domain>
+        <domain includeSubdomains="true">cs5.pikabu.ru</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config> 

@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="#EEEEEE" />
-            <corners android:radius="8dp" />
-        </shape>
-    </item>
-    <item android:gravity="center">
-        <shape android:shape="rectangle">
-            <size android:width="100dp" android:height="100dp" />
-            <solid android:color="#CCCCCC" />
-            <corners android:radius="50dp" />
-        </shape>
-    </item>
-    <item android:gravity="center" android:top="30dp" android:bottom="30dp" android:left="30dp" android:right="30dp">
-        <rotate android:fromDegrees="45">
-            <shape android:shape="line">
-                <stroke android:color="#999999" android:width="4dp" />
-            </shape>
-        </rotate>
-    </item>
-    <item android:gravity="center" android:top="30dp" android:bottom="30dp" android:left="30dp" android:right="30dp">
-        <rotate android:fromDegrees="-45">
-            <shape android:shape="line">
-                <stroke android:color="#999999" android:width="4dp" />
-            </shape>
-        </rotate>
-    </item>
-</layer-list>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Фон -->
+    <path
+        android:fillColor="#EEEEEE"
+        android:pathData="M0,0 L200,0 L200,200 L0,200 Z" />
+    
+    <!-- Стилизованная иконка изображения -->
+    <path
+        android:fillColor="#CCCCCC"
+        android:pathData="M50,80 L80,110 L100,90 L150,140 L50,140 Z" />
+    
+    <!-- Круг (солнце) -->
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M130,70 A15,15 0 1,1 130,70.1" />
+    
+    <!-- Текст "Мем" -->
+    <path
+        android:fillColor="#AAAAAA"
+        android:pathData="M75,65 L80,55 L90,55 L95,65 L90,75 L80,75 Z M85,65 L80,65 L80,55 M100,55 L100,75 M105,55 L115,55 L120,60 L115,65 L105,65 M105,65 L105,75" />
+</vector>

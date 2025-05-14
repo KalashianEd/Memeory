@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kalashianed.memeory.fragments.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_gameModeFragment"
+            app:destination="@id/gameModeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameModeFragment"
+        android:name="com.kalashianed.memeory.fragments.GameModeFragment"
+        android:label="game_mode"
+        tools:layout="@layout/fragment_game_mode" />
+
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.kalashianed.memeory.fragments.LeaderboardFragment"
+        android:label="leaderboard"
+        tools:layout="@layout/fragment_leaderboard" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.kalashianed.memeory.fragments.ProfileFragment"
+        android:label="profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.kalashianed.memeory.fragments.SettingsFragment"
+        android:label="settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation> 
